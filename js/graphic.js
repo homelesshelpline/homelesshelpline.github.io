@@ -16,7 +16,7 @@ var columns = [
 {   "data": "Y Coord", "title": "Y Co-Ord." }, 
 {   "data": "Googlemapslink", "title": "Google Maps link", 
     "render": function(data, type, row, meta) {
-      if(type === 'row'){
+      if(type === 'display'){
         return data = '<a href="' + data + '">' + data + '</a>';
       }
             
