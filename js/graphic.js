@@ -17,12 +17,13 @@ var columns = [
 {   "data": "Googlemapslink", "title": "Google Maps link", 
     "render": function(data, type, row, meta) {
       if(type === 'display'){
-        return data = '<a href="' + data + '">' + data + '</a>';
+        return data = '<a href="' + data + '">' + "Link" + '</a>';
       }
             
     return data;
   }
-} 
+},
+{   "data": "Means of Access", "title": "Means of Access"} 
 ];
 
 $(document).ready(function() {
