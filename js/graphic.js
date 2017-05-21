@@ -8,21 +8,21 @@ var key =
 //punctuation or numbers in your column name
 //"title" is the column name you want to appear in the published table
 var columns = [
-{  "data": "Name", "title": "Name" }, 
-{  "data": "Address", "title": "Address"} , 
-{	"data": "Tel", "title": "Tel" }, 
-{  "data": "Type",  "title": "Type" }, 
-{  "data": "X Coord",  "title": "X Co-Ord." }, 
-{  "data": "Y Coord", "title": "Y Co-Ord." }, 
-{  "data": "Googlemapslink", "title": "Google Maps link", "render": function(data, type, row, meta) {
-            if(type === '#graphic'){
-                data = '<a href="' + data + '">' + data + '</a>';
-            }
+{   "data": "Name", "title": "Name" }, 
+{   "data": "Address", "title": "Address"} , 
+{   "data": "Tel", "title": "Tel" }, 
+{   "data": "Type",  "title": "Type" }, 
+{   "data": "X Coord",  "title": "X Co-Ord." }, 
+{   "data": "Y Coord", "title": "Y Co-Ord." }, 
+{   "data": "Googlemapslink", "title": "Google Maps link", 
+    "render": function(data, type, row, meta) {
+      if(type === 'row'){
+        return data = '<a href="' + data + '">' + data + '</a>';
+      }
             
-            return data;
-         }
-}, 
-{  "data": "Linktophoto", "title": "Link to Photo"}
+    return data;
+  }
+} 
 ];
 
 $(document).ready(function() {
