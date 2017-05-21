@@ -14,7 +14,10 @@ var columns = [
 {  "data": "Type",  "title": "Type" }, 
 {  "data": "X Coord",  "title": "X Co-Ord." }, 
 {  "data": "Y Coord", "title": "Y Co-Ord." }, 
-{  "data": "Googlemapslink", "title": "Google Maps link"}, 
+{  "data": "Googlemapslink", "render": function (data, type, row, meta) {
+        return '<a href="view/order?' + data + '">' + data + '</a>';
+    } "title": "Google Maps link"}, 
+
 {  "data": "Linktophoto", "title": "Link to Photo"}
 ];
 
