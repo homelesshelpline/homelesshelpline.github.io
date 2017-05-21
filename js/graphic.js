@@ -14,8 +14,14 @@ var columns = [
 {  "data": "Type",  "title": "Type" }, 
 {  "data": "X Coord",  "title": "X Co-Ord." }, 
 {  "data": "Y Coord", "title": "Y Co-Ord." }, 
-{  "data": "Googlemapslink", "title": "Google Maps link"}, 
-
+{  "data": "Googlemapslink", "title": "Google Maps link", "render": function(data, type, row, meta) {
+            if(type === 'display'){
+                data = '<a href="' + data + '">' + data + '</a>';
+            }
+            
+            return data;
+         }
+}, 
 {  "data": "Linktophoto", "title": "Link to Photo"}
 ];
 
@@ -54,16 +60,6 @@ $(document).ready(function() {
         //"paging": false,
         //"searching": false,
         //"info": false
-        { 
-         "data": "weblink",
-         "render": function(data, type, row, meta){
-            if(type === 'display'){
-                data = '<a href="' + data + '">' + data + '</a>';
-            }
-
-            return data;
-         }
-      } 
       });
   }
 });
