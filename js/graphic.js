@@ -56,7 +56,7 @@ $(document).ready(function() {
       // "text-align": left,
       "pageLength": 25,
       "order": [
-      [2, "desc"]
+      [0, "asc"]
       ], //order on second column
       "pagingType": "simple" //no page numbers
         //uncomment these options to simplify your table
