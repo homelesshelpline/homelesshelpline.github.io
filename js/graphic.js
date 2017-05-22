@@ -54,6 +54,7 @@ $(document).ready(function() {
       "data": data,
       "columns": columns,
       // "text-align": left,
+      "pageLength": 25,
       "order": [
       [2, "desc"]
       ], //order on second column
